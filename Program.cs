@@ -1,35 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
-using LeanringWithMosh.Attributes;
-using LeanringWithMosh.OOP.Delegates;
-using LeanringWithMosh.Collections;
+using System.Linq;
 
 namespace LeanringWithMosh
 {
-
-    class Product : IProduct
-    {
-        public string product { get; set; }
-        public int amount { get; set; }
-        public double price { get; set; }
-
-        public Product(string product, int amount, double price)
-        {
-            this.product = product;
-            this.amount = amount;
-            this.price = price;
-        }
-    }
-
-
+    
     class Program
     {
         static void Main(string[] args)
         {
-            /*ShowMessageAboutMe Show = new ShowMessageAboutMe();
-            Engineer yuri = new Engineer("Yuri", "Melo", 22, "Chemical Engineer at Petrobras");
-            Show.ShowDelegate(yuri);*/
-            
+            /*Person[] peopleArray = new Person[3] 
+            {
+                new Person("John", "Smith"),
+                new Person("Jim", "Johnson"),
+                new Person("Sue", "Rabon")
+            };
+
+            People peopleList = new People(peopleArray);
+            foreach (Person p in peopleList)
+                Console.WriteLine(p.firstName + " " + p.lastName);*/
+            var names = new List<string> { "sam", "alexia", "simon", "sumanth", "tony", "sam", "amr", "mark", "drew" };
+            var moreThenFiveLetters = names.Where(w => w.Length > 5);
+            names[0] = "benjamin";
+
+            foreach(var name in moreThenFiveLetters)
+            {
+                Console.WriteLine(name);
+            }
 
         }
     }
