@@ -18,7 +18,7 @@ namespace LeanringWithMosh.Collections.Enumerations
 
     public class MyInfinityEnumerator : IEnumerator<int>
     {
-        public object Current { get, private set; } = 0;
+        public object Current { get; private set; } = 0;
 
         int IEnumerator<int>.Current => throw new System.NotImplementedException();
 
