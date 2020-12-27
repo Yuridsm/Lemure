@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LeanringWithMosh.SOLID.SRP.SRP.Solucao
 {
-    class EmailServices
+    /*class EmailServices
     {
         public static void Enviar(string de, string para, string assunto, string mensagem)
         {
@@ -21,5 +21,5 @@ namespace LeanringWithMosh.SOLID.SRP.SRP.Solucao
             mail.Body = mensagem;
             client.Send(mail);
         }
-    }
+    }*/
 }
