@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+/*
 namespace LeanringWithMosh.SOLID.SRP.SRP.Violacao
 {
     public class Cliente
@@ -53,3 +53,4 @@ namespace LeanringWithMosh.SOLID.SRP.SRP.Violacao
         }
     }
 }
+*/
