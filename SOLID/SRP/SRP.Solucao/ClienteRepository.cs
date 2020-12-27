@@ -6,7 +6,7 @@ namespace LeanringWithMosh.SOLID.SRP.SRP.Solucao
 {
     public class ClienteRepository
     {
-        public void AdicionarCliente(Cliente cliente)
+        /*public void AdicionarCliente(Cliente cliente)
         {
             using (var cn = new SqlConnection())
             {
@@ -26,6 +26,6 @@ namespace LeanringWithMosh.SOLID.SRP.SRP.Solucao
                 cmd.ExecuteNonQuery();
 
             }
-        }
+        }*/
     }
 }
