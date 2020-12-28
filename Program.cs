@@ -24,13 +24,19 @@ namespace LeanringWithMosh
             {
                 Console.WriteLine(employee);
             }
-            Console.ReadLine();
 
-            // Training IDisposable
+            // Training IDisposable using FilesManager class
             using (FilesManager manager = new FilesManager("C:\\Users\\yurii\\Documents\\yuriCSharp.data"))
             {
                 byte[] data = Encoding.ASCII.GetBytes("C:\\Users\\yurii\\Documents\\Macoratti.net");
                 manager.Write(data);
+            }
+
+            // Training IDisposable using MyDatabase class
+            using (MyDatabase db = new MyDatabase("Oracle:localhost:4444, ..."))
+            {
+                Console.WriteLine("Connecting to the Oracle");
+                db.GetOnDatabase();
             }
         }
     }
