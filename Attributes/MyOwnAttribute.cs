@@ -1,14 +1,43 @@
 ﻿using System;
+using LeanringWithMosh.interfaces.Attribute;
 
 namespace LeanringWithMosh.Attributes
 {
     [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class, Inherited= true, AllowMultiple = true)]
-    class MyOwnAttribute: Attribute
+    public class MyOwnAttribute: Attribute
     {
         private bool myValue;
-        public MyOwnAttribute(bool myValues)
+        private string description;
+        private IContractAttribute contract;
+        private Guid codeGenerated;
+        public MyOwnAttribute(bool myValues, string description, IContractAttribute contract)
         {
             this.myValue = myValues;
+            this.description = description;
+            this.contract = contract;
+            this.codeGenerated = Guid.NewGuid();
         }
+
+        public virtual bool MyValue
+        {
+            get { return myValue; }
+        }
+
+        public virtual string Description 
+        {
+            get { return description; }
+        }
+
+        public virtual IContractAttribute Contract
+        {
+            get { return contract; }
+            set { this.contract = value; }
+        }
+
+        public virtual string CodeGenerated
+        {
+            get { return codeGenerated.ToString(); }
+        }
+
     }
 }
