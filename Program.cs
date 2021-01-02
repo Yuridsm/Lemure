@@ -1,5 +1,6 @@
 ﻿using LeanringWithMosh.interfaces.Comparable;
 using LeanringWithMosh.interfaces.Disposable;
+using LeanringWithMosh.Attributes;
 using System.Collections.Generic;
 using System;
 using System.Text;
@@ -38,6 +39,9 @@ namespace LeanringWithMosh
                 Console.WriteLine("Connecting to the Oracle");
                 db.GetOnDatabase();
             }
+
+            // Testing Attributes
+            UsingAttributes.TestingAttribute();
         }
     }
 }
