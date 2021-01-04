@@ -8,13 +8,11 @@ namespace LeanringWithMosh.Attributes
     {
         private bool myValue;
         private string description;
-        private IContractAttribute contract;
         private Guid codeGenerated;
-        public MyOwnAttribute(bool myValues, string description, IContractAttribute contract)
+        public MyOwnAttribute(bool myValues, string description)
         {
             this.myValue = myValues;
             this.description = description;
-            this.contract = contract;
             this.codeGenerated = Guid.NewGuid();
         }
 
