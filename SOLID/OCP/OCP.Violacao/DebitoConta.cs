@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace LeanringWithMosh.SOLID.OCP.OCP.Violacao
+﻿namespace LeanringWithMosh.SOLID.OCP.OCP.Violacao
 {
     public class DebitoConta
     {
