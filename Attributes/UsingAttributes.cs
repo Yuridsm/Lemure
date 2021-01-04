@@ -7,13 +7,9 @@ namespace LeanringWithMosh.Attributes
     public class Contract : IContractAttribute
     {
         public string firstName { get; }
-
         public string lastName { get; }
-
         public string age { get; }
-
         public bool assign { get; }
-
         public Contract(string firstName, string lastName, string age, bool assign)
         {
             this.firstName = firstName;
@@ -25,16 +21,17 @@ namespace LeanringWithMosh.Attributes
 
     public class UsingAttributes
     {
+        private IContractAttribute myOwnContract { get; set; }
         public UsingAttributes()
         {
-            Contract myOwnContract = new Contract("","","",true);
+            //Contract myOwnContract = 
+            myOwnContract = new Contract("", "", "", true);
         }
 
-        [MyOwn(true, description: "Yuri", new Contract("Yuri", "Melo", "22", true))]
+        [MyOwn(true, description: "Yuri")]
         public static void TestingAttribute()
         {
-            Console.WriteLine(MyOwnAttribute);
-            
+            //Console.WriteLine(MyOwnAttribute);
         }
     }
 }
