@@ -26,11 +26,11 @@ namespace LeanringWithMosh.Attributes
             get { return description; }
         }
 
-        public virtual IContractAttribute Contract
+        /*public virtual IContractAttribute Contract
         {
             get { return contract; }
             set { this.contract = value; }
-        }
+        }*/
 
         public virtual string CodeGenerated
         {
