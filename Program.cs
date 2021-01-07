@@ -1,17 +1,35 @@
 ﻿using LeanringWithMosh.interfaces.Comparable;
 using LeanringWithMosh.interfaces.Disposable;
+using LeanringWithMosh.Reflection.NoReflection;
+using LeanringWithMosh.Reflection.WithReflection;
+using LeanringWithMosh.Serialize;
 using LeanringWithMosh.Attributes;
 using System.Collections.Generic;
 using System;
 using System.Text;
+using System.Text.Json;
 
 namespace LeanringWithMosh
 {
-    class Program
+    public class Program
     {
+        public static void LoggerNoReflection(Customer customer, Product product, Order order)
+        {
+            LogNoReflection.CustomerLog(customer);
+            LogNoReflection.ProductLog(product);
+            LogNoReflection.OrdersLog(order);
+        }
+
+        public static void LoggerWithReflection(Customer customer, Product product, Order order)
+        {
+            LogWithReflection.Log(customer);
+            LogWithReflection.Log(product);
+            LogWithReflection.Log(order);
+        }
+
         static void Main(string[] args)
         {
-            List<Employee> list = new List<Employee>();
+            /*List<Employee> list = new List<Employee>();
             list.Add(new Employee() { name = "Macoratti", salary = 80000, cpf = new CPF() { cpf = 11905365446 } });
             list.Add(new Employee() { name = "Janice", salary = 10000, cpf = new CPF() { cpf = 20005365446 } });
             list.Add(new Employee() { name = "Yuri", salary = 40000, cpf = new CPF() { cpf = 13005365446 } });
@@ -41,8 +59,53 @@ namespace LeanringWithMosh
             }
 
             // Testing Attributes
-            
             UsingAttributes.TestingAttribute();
+
+            // Testing Reflection
+            var customer = new Customer()
+            {
+                Id = 10,
+                Name = "Macoratti",
+                Address = "Rua Projetada, 100"
+            };
+            var product = new Product()
+            {
+                Id = 1,
+                Name = "Caderno",
+                Description = "Caderno Espiral 100 folhas",
+                Stock = 100,
+                Price = 3.99M
+            };
+            var order = new Order()
+            {
+                Id = 1,
+                CustumerId = 1,
+                OrderDate = DateTime.Now
+            };
+            Console.WriteLine("***** Logando sem usar Reflection ****");
+            LoggerNoReflection(customer, product, order);
+            Console.WriteLine(" ---------- Logando usando Reflection ----------");
+            //LogarUsandoReflection(cliente, produto, pedido);
+            LoggerWithReflection(customer, product, order);*/
+
+            // Serializing and Desserializing
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+            };
+            WeatherForecast weatherForecast = new WeatherForecast();
+            weatherForecast.Date = DateTime.Now;
+            weatherForecast.Summary = "Hey there";
+            weatherForecast.TemperatureCelsius = 123;
+            weatherForecast.Anyone = new ComplexWrap();
+            weatherForecast.Anyone.firstName = "Yuri";
+            weatherForecast.Anyone.lastName = "Melo";
+            weatherForecast.Anyone.age = 23;
+            string jsonString = JsonSerializer.Serialize(weatherForecast, options);
+            Console.WriteLine(jsonString);
+
+            var forecast = JsonSerializer.Deserialize<WeatherForecast>(jsonString, options);
+            Console.WriteLine(forecast.Anyone.firstName);
         }
     }
 }
