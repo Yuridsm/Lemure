@@ -31,7 +31,7 @@ namespace LeanringWithMosh.Attributes
         [MyOwn(true, description: "Yuri")]
         public static void TestingAttribute()
         {
-            //Console.WriteLine(MyOwnAttribute);
+            Console.WriteLine();
         }
     }
 }
