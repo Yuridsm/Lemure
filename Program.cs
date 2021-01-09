@@ -1,13 +1,8 @@
-﻿using LeanringWithMosh.interfaces.Comparable;
-using LeanringWithMosh.interfaces.Disposable;
-using LeanringWithMosh.Reflection.NoReflection;
+﻿using LeanringWithMosh.Reflection.NoReflection;
 using LeanringWithMosh.Reflection.WithReflection;
-using LeanringWithMosh.Serialize;
-using LeanringWithMosh.Attributes;
-using System.Collections.Generic;
-using System;
-using System.Text;
-using System.Text.Json;
+using LeanringWithMosh.LazyInitialization;
+using Order = LeanringWithMosh.Reflection.NoReflection.Order;
+using System.Runtime.InteropServices;
 
 namespace LeanringWithMosh
 {
@@ -89,7 +84,7 @@ namespace LeanringWithMosh
             LoggerWithReflection(customer, product, order);*/
 
             // Serializing and Desserializing
-            var options = new JsonSerializerOptions
+            /*var options = new JsonSerializerOptions
             {
                 WriteIndented = true,
             };
@@ -105,7 +100,14 @@ namespace LeanringWithMosh
             Console.WriteLine(jsonString);
 
             var forecast = JsonSerializer.Deserialize<WeatherForecast>(jsonString, options);
-            Console.WriteLine(forecast.Anyone.firstName);
+            Console.WriteLine(forecast.Anyone.firstName);*/
+
+            // Lazy Initializatin
+            LazyInit lazy = new LazyInit();
+            lazy.Load();
+
+            // Interop Services
+
         }
     }
 }
