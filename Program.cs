@@ -3,6 +3,8 @@ using LeanringWithMosh.Reflection.WithReflection;
 using LeanringWithMosh.LazyInitialization;
 using Order = LeanringWithMosh.Reflection.NoReflection.Order;
 using System.Runtime.InteropServices;
+using System;
+using LeanringWithMosh.Controllers;
 
 namespace LeanringWithMosh
 {
@@ -107,7 +109,7 @@ namespace LeanringWithMosh
             lazy.Load();
 
             // Interop Services
-
+            Console.WriteLine(nameof(Order));
         }
     }
 }
