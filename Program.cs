@@ -33,7 +33,7 @@ namespace LeanringWithMosh
             int myHouseNumber = 0;
 
             DestructuringTuples.GetData();
-            (string name, string city, string state, houseNumber) = DestructuringTuples.GetAddressInfo();
+            (string name, string city, string state, int houseNumber) = DestructuringTuples.GetAddressInfo();
             (myName, myCity, myState, myHouseNumber) = DestructuringTuples.GetAddressInfo();
             Console.WriteLine(name);
             Console.WriteLine(city);
