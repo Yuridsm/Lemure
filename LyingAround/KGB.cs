@@ -5,21 +5,18 @@ using System.Text;
 
 namespace LeanringWithMosh.LyingAround
 {
-    public class KGB
+    public class KGB : IAgent<KGB>
     {
-        public string agent;
-        public int age;
-        public string department;
-        public string code;
+        public string fName { get; set; }
+        public string lName { get; set; }
+        public int age { get; set; }
+        public int code { get; set; }
 
-        public string KGBAgentCode()
+        public void GetInfo()
         {
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            var random = new Random();
-            code = new string(Enumerable.Repeat(chars, 15)
-                .Select(s => s[random.Next(s.Length)]).ToArray());
-
-            return code;
+            Console.WriteLine(fName);
+            Console.WriteLine(lName);
+            Console.WriteLine(age);
         }
     }
 }
