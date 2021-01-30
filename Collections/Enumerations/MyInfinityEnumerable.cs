@@ -1,41 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using LeanringWithMosh.Collections;
 
 namespace LeanringWithMosh.Collections.Enumerations
 {
-    public class MyInfinityEnumerable : IEnumerable<int>
+    public class MyInfinityEnumerable : IEnumerable<Product>
     {
-        public IEnumerator GetEnumerator()
+        private readonly Product[] _products;
+        public MyInfinityEnumerable(Product[] products)
         {
-            return new MyInfinityEnumerator();
+            _products = products;
+        }
+        public IEnumerator<Product> GetEnumerator()
+        {
+            return new MyInfinityEnumerator(_products);
         }
 
-        IEnumerator<int> IEnumerable<int>.GetEnumerator()
+        IEnumerator IEnumerable.GetEnumerator()
         {
-            return new MyInfinityEnumerator();
+            return new MyInfinityEnumerator(_products);
         }
     }
-
-    public class MyInfinityEnumerator : IEnumerator<int>
-    {
-        public object Current { get; private set; } = 0;
-
-        int IEnumerator<int>.Current => throw new System.NotImplementedException();
-
-        public void Dispose()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public bool MoveNext()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Reset()
-        {
-            throw new System.NotImplementedException();
-        }
-    }
-
 }
