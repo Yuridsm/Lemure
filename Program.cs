@@ -1,47 +1,43 @@
-﻿using LeanringWithMosh.Reflection.NoReflection;
-using LeanringWithMosh.Reflection.WithReflection;
-using LeanringWithMosh.LazyInitialization;
-using Order = LeanringWithMosh.Reflection.NoReflection.Order;
-using System.Runtime.InteropServices;
+﻿using LeanringWithMosh.Collections.Enumerations;
+using LeanringWithMosh.Collections;
+using LeanringWithMosh.OOP.Delegates;
 using System;
-using LeanringWithMosh.Destructuring;
+using static LeanringWithMosh.OOP.Delegates.SampleDelegate;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace LeanringWithMosh
 {
     public class Program
     {
-        public static void LoggerNoReflection(Customer customer, Product product, Order order)
-        {
-            LogNoReflection.CustomerLog(customer);
-            LogNoReflection.ProductLog(product);
-            LogNoReflection.OrdersLog(order);
-        }
-
-        public static void LoggerWithReflection(Customer customer, Product product, Order order)
-        {
-            LogWithReflection.Log(customer);
-            LogWithReflection.Log(product);
-            LogWithReflection.Log(order);
-        }
-
+        private delegate String myDelegateForMusic1(string music);
+        private delegate String myDelegateForMusic2();
         public static void Main(string[] args)
         {
-            // Destructuring tuples
-            string myName = "Generic Name";
-            string myCity = "Generic City";
-            string myState = "Generic State";
-            int myHouseNumber = 0;
+            mySampleClass smp = new mySampleClass();
+            myMethodDelegate myD1 = new myMethodDelegate(smp.myStringMethod);
+            myMethodDelegate myD2 = new myMethodDelegate(mySampleClass.mySignMethod);
 
-            DestructuringTuples.GetData();
-            (string name, string city, string state, int houseNumber) = DestructuringTuples.GetAddressInfo();
-            (myName, myCity, myState, myHouseNumber) = DestructuringTuples.GetAddressInfo();
-            Console.WriteLine(name);
-            Console.WriteLine(city);
-            Console.WriteLine(state);
-            Console.WriteLine(myHouseNumber);
+            /*Console.WriteLine("{0} is {1}; use the sign \"{2}\".", 5, myD1(5), myD2(5));
+            Console.WriteLine("{0} is {1}; use the sign \"{2}\".", -3, myD1(-3), myD2(-3));
+            Console.WriteLine("{0} is {1}; use the sign \"{2}\".", 0, myD1(0), myD2(0));*/
+
+            PlayFavoriteMusic music = new PlayFavoriteMusic();
+            myDelegateForMusic1 music1 = new myDelegateForMusic1(music.play);
+            myDelegateForMusic2 music2 = new myDelegateForMusic2(PlayFavoriteMusic.next);
+
+            Console.WriteLine("Which music is playing?");
+            Console.WriteLine(music1("ela vem"));
+            Console.WriteLine("Next music is :");
+            Console.WriteLine(music2());
+            Console.WriteLine(music1.GetInvocationList());
+            Console.WriteLine(FuncDelegate.selector("YURI MELOOOO"));
+            // ---
+            Func<string, string> selector = str => str.ToUpper();
+            string[] name = { "yuri melo", "developer", "23 years old" };
+            IEnumerable<String> words = name.Select(selector);
+            foreach (String a in words)
+                Console.WriteLine(a);
         }
-
-        
-
     }
 }
