@@ -11,7 +11,7 @@ namespace LeanringWithMosh.OOP.Delegates
         string _position { get; set; }
     }
 
-    public class Engineer : IEngineer
+    public sealed class Engineer : IEngineer
     {
         public string _firstName { get ; set ; }
         public string _lastName { get ; set; }
@@ -27,7 +27,7 @@ namespace LeanringWithMosh.OOP.Delegates
         }
     }
 
-    class ShowMessageAboutMe
+    public class ShowMessageAboutMe
     {
         private delegate void InformationAboutEngineer(IEngineer engineer);
 
