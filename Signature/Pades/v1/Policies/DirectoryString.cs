@@ -1,4 +1,4 @@
-﻿namespace LeanringWithMosh.Signature.Pades.v1.Policies
+﻿namespace lemure.Signature.Pades.v1.Policies
 {
     public class DirectoryString
     {

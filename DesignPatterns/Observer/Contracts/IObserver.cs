@@ -1,4 +1,4 @@
-﻿namespace LeanringWithMosh.DesignPatterns.Observer.Contracts
+﻿namespace lemure.DesignPatterns.Observer.Contracts
 {
     public interface IObserver
     {

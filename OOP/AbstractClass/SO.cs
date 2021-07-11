@@ -1,6 +1,6 @@
 using System;
 
-namespace LeanringWithMosh.OOP.AbstractClass
+namespace lemure.OOP.AbstractClass
 {
     public abstract class SO
     {

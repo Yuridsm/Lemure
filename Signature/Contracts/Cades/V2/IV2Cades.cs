@@ -1,8 +1,8 @@
-﻿using LeanringWithMosh.Signature.Cades.V2.Policies;
+﻿using lemure.Signature.Cades.V2.Policies;
 using System;
 using System.Collections.Generic;
 
-namespace LeanringWithMosh.Signature.Contracts.Cades.V2
+namespace lemure.Signature.Contracts.Cades.V2
 {
     public interface IV2Cades
     {

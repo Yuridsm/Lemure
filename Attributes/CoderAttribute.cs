@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeanringWithMosh.Attributes
+namespace lemure.Attributes
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method,
     AllowMultiple = true)]

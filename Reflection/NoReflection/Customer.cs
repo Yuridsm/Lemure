@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeanringWithMosh.Reflection.NoReflection
+namespace lemure.Reflection.NoReflection
 {
     public class Customer
     {

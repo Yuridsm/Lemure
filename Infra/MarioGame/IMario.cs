@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeanringWithMosh.Infra.MarioGame
+namespace lemure.Infra.MarioGame
 {
     public interface IMario
     {

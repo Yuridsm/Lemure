@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using LeanringWithMosh.Collections;
+using lemure.Collections;
 
-namespace LeanringWithMosh.Collections.Enumerations
+namespace lemure.Collections.Enumerations
 {
     public class MyInfinityEnumerable : IEnumerable<Product>
     {

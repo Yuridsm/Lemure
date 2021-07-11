@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeanringWithMosh.Enums
+namespace lemure.Enums
 {
     public enum MyOptions : int
     {

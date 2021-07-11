@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LeanringWithMosh.Infra.IoC
+namespace lemure.Infra.IoC
 {
     public class IoC
     {

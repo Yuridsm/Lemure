@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeanringWithMosh.Destructuring
+namespace lemure.Destructuring
 {
     public class DestructuringTuples
     {

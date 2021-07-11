@@ -1,8 +1,8 @@
 ﻿using System;
-using LeanringWithMosh.Attributes;
-using LeanringWithMosh.interfaces.Attribute;
+using lemure.Attributes;
+using lemure.interfaces.Attribute;
 
-namespace LeanringWithMosh.Attributes
+namespace lemure.Attributes
 {
     public class Contract : IContractAttribute
     {

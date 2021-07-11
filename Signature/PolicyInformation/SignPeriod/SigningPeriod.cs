@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LeanringWithMosh.Signature.PolicyInformation.SignPeriod
+namespace lemure.Signature.PolicyInformation.SignPeriod
 {
     public class SigningPeriod
     {

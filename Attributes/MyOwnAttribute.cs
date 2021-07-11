@@ -1,7 +1,7 @@
 ﻿using System;
-using LeanringWithMosh.interfaces.Attribute;
+using lemure.interfaces.Attribute;
 
-namespace LeanringWithMosh.Attributes
+namespace lemure.Attributes
 {
     [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class, Inherited= true, AllowMultiple = true)]
     public class MyOwnAttribute: Attribute

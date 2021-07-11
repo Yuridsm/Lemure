@@ -1,5 +1,5 @@
 ﻿
-namespace LeanringWithMosh.SOLID.OCP.OCP.Violacao
+namespace lemure.SOLID.OCP.OCP.Violacao
 {
     public enum TipoConta
     {

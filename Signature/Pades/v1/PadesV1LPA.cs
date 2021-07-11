@@ -1,7 +1,7 @@
-﻿using LeanringWithMosh.Signature.Pades.v1.Policies;
+﻿using lemure.Signature.Pades.v1.Policies;
 using System.Collections.Generic;
 
-namespace LeanringWithMosh.Signature.Pades.v1
+namespace lemure.Signature.Pades.v1
 {
     public class PadesV1LPA
     {

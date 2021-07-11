@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace LeanringWithMosh.interfaces.Disposable
+namespace lemure.interfaces.Disposable
 {
     class FilesManager : IDisposable
     {

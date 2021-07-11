@@ -1,4 +1,4 @@
-﻿namespace LeanringWithMosh.Signature.PolicyInformation.OtherHashAlgorithmAndValue
+﻿namespace lemure.Signature.PolicyInformation.OtherHashAlgorithmAndValue
 {
     public class OtherHashAlgAndValue
     {

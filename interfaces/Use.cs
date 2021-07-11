@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LeanringWithMosh.interfaces
+namespace lemure.interfaces
 {
     public class Use
     {

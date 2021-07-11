@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace LeanringWithMosh.Serializable
+namespace lemure.Serializable
 {
     public class ObjectMain : ISerializable
     {

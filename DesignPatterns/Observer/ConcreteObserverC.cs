@@ -1,7 +1,7 @@
 using System;
-using LeanringWithMosh.DesignPatterns.Observer.Contracts;
+using lemure.DesignPatterns.Observer.Contracts;
 
-namespace LeanringWithMosh.DesignPatterns.Observer
+namespace lemure.DesignPatterns.Observer
 {
     public class ConcreteObserverC : IObserver
     {

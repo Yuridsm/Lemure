@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeanringWithMosh.SOLID.OCP.OCP.Solucao_Extension_Methods
+namespace lemure.SOLID.OCP.OCP.Solucao_Extension_Methods
 {
     public static class DebitoContaPoupanca
     {

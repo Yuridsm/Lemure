@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeanringWithMosh.interfaces.Attribute
+namespace lemure.interfaces.Attribute
 {
     public interface IContractAttribute
     {

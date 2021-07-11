@@ -1,7 +1,7 @@
-﻿using LeanringWithMosh.Signature.Pades.v1.Policies;
-using LeanringWithMosh.Signature.PolicyInformation.SignPeriod;
+﻿using lemure.Signature.Pades.v1.Policies;
+using lemure.Signature.PolicyInformation.SignPeriod;
 
-namespace LeanringWithMosh.Signature.Pades.v1.Policies
+namespace lemure.Signature.Pades.v1.Policies
 {
     public class PadesPolicyInfo
     {

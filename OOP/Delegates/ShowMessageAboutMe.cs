@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeanringWithMosh.OOP.Delegates
+namespace lemure.OOP.Delegates
 {
     public interface IEngineer {
         string _firstName { get; set; }

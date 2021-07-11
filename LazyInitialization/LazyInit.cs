@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using LeanringWithMosh.LazyInitialization;
+using lemure.LazyInitialization;
 
-namespace LeanringWithMosh.LazyInitialization
+namespace lemure.LazyInitialization
 {
     class LazyInit
     {

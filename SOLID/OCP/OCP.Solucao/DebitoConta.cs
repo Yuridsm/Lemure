@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace LeanringWithMosh.SOLID.OCP.OCP.Solucao
+namespace lemure.SOLID.OCP.OCP.Solucao
 {
     public abstract class DebitoConta
     {

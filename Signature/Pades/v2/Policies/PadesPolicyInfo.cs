@@ -1,8 +1,8 @@
-﻿using LeanringWithMosh.Signature.PolicyInformation.OtherHashAlgorithmAndValue;
-using LeanringWithMosh.Signature.PolicyInformation.SignPeriod;
+﻿using lemure.Signature.PolicyInformation.OtherHashAlgorithmAndValue;
+using lemure.Signature.PolicyInformation.SignPeriod;
 using System;
 
-namespace LeanringWithMosh.Signature.Pades.v2.Policies
+namespace lemure.Signature.Pades.v2.Policies
 {
     public class PadesPolicyInfo
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace LeanringWithMosh.Reflection.NoReflection
+namespace lemure.Reflection.NoReflection
 {
     public class LogNoReflection
     {

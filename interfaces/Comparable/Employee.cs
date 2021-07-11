@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LeanringWithMosh.interfaces.Comparable
+namespace lemure.interfaces.Comparable
 {
     public class Employee : IComparable<Employee>
     {

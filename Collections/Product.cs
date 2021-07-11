@@ -1,4 +1,4 @@
-﻿namespace LeanringWithMosh.Collections
+﻿namespace lemure.Collections
 {
     public class Product
     {

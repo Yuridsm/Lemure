@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeanringWithMosh.LazyInitialization
+namespace lemure.LazyInitialization
 {
     public class Order
     {

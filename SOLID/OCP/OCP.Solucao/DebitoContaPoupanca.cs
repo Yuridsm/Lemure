@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeanringWithMosh.SOLID.OCP.OCP.Solucao
+namespace lemure.SOLID.OCP.OCP.Solucao
 {
     public class DebitoContaPoupanca : DebitoConta
     {

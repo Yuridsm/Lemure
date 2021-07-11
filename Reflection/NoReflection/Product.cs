@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LeanringWithMosh.Reflection.NoReflection
+namespace lemure.Reflection.NoReflection
 {
     public class Product
     {

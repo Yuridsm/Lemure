@@ -1,5 +1,5 @@
 ﻿
-namespace LeanringWithMosh.OOP
+namespace lemure.OOP
 {
     abstract class Eletrodomestico
     {

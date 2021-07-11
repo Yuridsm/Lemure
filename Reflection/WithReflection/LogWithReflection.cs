@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeanringWithMosh.Reflection.WithReflection
+namespace lemure.Reflection.WithReflection
 {
     public class LogWithReflection
     {

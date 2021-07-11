@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using LeanringWithMosh.helpers;
-using LeanringWithMosh.interfaces;
+using lemure.helpers;
+using lemure.interfaces;
 
-namespace LeanringWithMosh.Controllers
+namespace lemure.Controllers
 {
     class CustomerController
     {

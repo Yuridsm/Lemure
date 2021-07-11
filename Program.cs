@@ -1,7 +1,7 @@
 ﻿using System;
-using LeanringWithMosh.DropCode;
+using lemure.DropCode;
 
-namespace LeanringWithMosh
+namespace lemure
 {
     public class Program
     {

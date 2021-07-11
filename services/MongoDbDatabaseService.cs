@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using LeanringWithMosh.interfaces;
+using lemure.interfaces;
 
-namespace LeanringWithMosh.services
+namespace lemure.services
 {
     class MongoDbDatabaseService : IDatabase
     {

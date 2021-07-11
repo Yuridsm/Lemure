@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeanringWithMosh.interfaces
+namespace lemure.interfaces
 {
     public static class StaticTest
     {

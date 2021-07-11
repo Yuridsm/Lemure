@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeanringWithMosh.Struct
+namespace lemure.Struct
 {
     public struct MutablePoint
     {

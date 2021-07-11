@@ -1,6 +1,6 @@
-﻿using LeanringWithMosh.Signature.PolicyInformation.OtherHashAlgorithmAndValue;
+﻿using lemure.Signature.PolicyInformation.OtherHashAlgorithmAndValue;
 
-namespace LeanringWithMosh.Signature.Pades.v1.Policies
+namespace lemure.Signature.Pades.v1.Policies
 {
     public class PoliciesDigest
     {

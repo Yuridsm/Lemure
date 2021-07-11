@@ -1,17 +1,17 @@
-using LeanringWithMosh.Signature.PolicyInformation.SignPeriod;
-using LeanringWithMosh.Signature.PolicyInformation.OtherHashAlgorithmAndValue;
+using lemure.Signature.PolicyInformation.SignPeriod;
+using lemure.Signature.PolicyInformation.OtherHashAlgorithmAndValue;
 using Org.BouncyCastle.Asn1;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Net;
-using LeanringWithMosh.Signature.Pades.v2;
-using LeanringWithMosh.Signature.Pades.v2.Policies;
-using LeanringWithMosh.Signature.Cades.V2.Policies;
-using LeanringWithMosh.Signature.Contracts.Cades.V2;
-using LeanringWithMosh.Signature.Cades.V2;
+using lemure.Signature.Pades.v2;
+using lemure.Signature.Pades.v2.Policies;
+using lemure.Signature.Cades.V2.Policies;
+using lemure.Signature.Contracts.Cades.V2;
+using lemure.Signature.Cades.V2;
 
-namespace LeanringWithMosh.Signature
+namespace lemure.Signature
 {
     public class Parse
     {

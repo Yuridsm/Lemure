@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeanringWithMosh.Collections.Enumerations
+namespace lemure.Collections.Enumerations
 {
     public class MyInfinityEnumerator : IEnumerator<Product>
     {

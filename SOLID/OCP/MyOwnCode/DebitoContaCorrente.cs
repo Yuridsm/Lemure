@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeanringWithMosh.SOLID.OCP.MyOwnCode
+namespace lemure.SOLID.OCP.MyOwnCode
 {
     class DebitoContaCorrente
     {

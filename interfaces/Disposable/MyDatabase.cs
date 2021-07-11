@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeanringWithMosh.interfaces.Disposable
+namespace lemure.interfaces.Disposable
 {
     public class MyDatabase : IDisposable
     {

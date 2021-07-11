@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 /*
-namespace LeanringWithMosh.SOLID.SRP.SRP.Violacao
+namespace lemure.SOLID.SRP.SRP.Violacao
 {
     public class Cliente
     {
