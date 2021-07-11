@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace LeanringWithMosh.Collections
+﻿namespace LeanringWithMosh.Collections
 {
     public class Product
     {
