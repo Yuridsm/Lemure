@@ -2,16 +2,21 @@
 
 namespace lemure.interfaces.Comparable
 {
-    public class CPF : IComparable<CPF>
+    public class CPF : IComparable<CPF> 
     {
-        public Int64 cpf;
+        private readonly Int64 _cpf;
+        public CPF(Int64 cpf)
+        {
+            _cpf = cpf;
+        }
+
         public int CompareTo(CPF cpf)
         {
-            if(this.cpf == cpf.cpf)
+            if(_cpf == cpf._cpf)
             {
                 return 0;
             } 
-            if (this.cpf > cpf.cpf)
+            if (_cpf > cpf._cpf)
             {
                 return 1;
             }
@@ -20,7 +25,7 @@ namespace lemure.interfaces.Comparable
 
         public override string ToString()
         {
-            return this.cpf.ToString();
+            return $"This is your CPF -> {_cpf}";
         }
     }
 }
