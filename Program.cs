@@ -7,12 +7,7 @@ namespace lemure
     {
         public static void Main(string[] args)
         {
-            var foo = Foo.Boo();
-
-            foreach(var elem in foo)
-            {
-                Console.WriteLine(elem);
-            }
+            Console.WriteLine(Lambda.GetDelegate(2));
         }
     }
 }
