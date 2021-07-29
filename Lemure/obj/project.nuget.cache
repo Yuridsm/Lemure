@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "mFoZq9wfvCUqF75apUVsdkw7mCXWYryP4GXTZpvMzpSE2DwIdemVF0YncosXVr49NlX5cAbUPShTjgo2iMPIJA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\YuriMelo\\Documents\\Lemure\\Lemure\\Lemure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\YuriMelo\\.nuget\\packages\\bouncycastle.netcore\\1.8.8\\bouncycastle.netcore.1.8.8.nupkg.sha512"
+  ],
+  "logs": []
+}
