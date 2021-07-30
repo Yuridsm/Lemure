@@ -1,4 +1,5 @@
-using Lemure.Collections;
+using System.Collections.Generic;
+using Lemure.Collections.Comparable;
 
 namespace Lemure.Collections.Comparer
 {
@@ -10,6 +11,10 @@ namespace Lemure.Collections.Comparer
             MaxSpeed
         }
         private SortBy compareField = SortBy.Name;
-        
+
+        public int Compare(Car? x, Car? y)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

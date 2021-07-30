@@ -1,3 +1,8 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+
 namespace Lemure.Enums
 {
     public abstract class Enumeration : IComparable
