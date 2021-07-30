@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\YuriMelo\\Documents\\Lemure\\Lemure\\Lemure.csproj": {}
+    "C:\\Users\\YuriMelo\\Documents\\lemure\\Lemure\\Lemure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\YuriMelo\\Documents\\Lemure\\Lemure\\Lemure.csproj": {
+    "C:\\Users\\YuriMelo\\Documents\\lemure\\Lemure\\Lemure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\YuriMelo\\Documents\\Lemure\\Lemure\\Lemure.csproj",
+        "projectUniqueName": "C:\\Users\\YuriMelo\\Documents\\lemure\\Lemure\\Lemure.csproj",
         "projectName": "Lemure",
-        "projectPath": "C:\\Users\\YuriMelo\\Documents\\Lemure\\Lemure\\Lemure.csproj",
+        "projectPath": "C:\\Users\\YuriMelo\\Documents\\lemure\\Lemure\\Lemure.csproj",
         "packagesPath": "C:\\Users\\YuriMelo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\YuriMelo\\Documents\\Lemure\\Lemure\\obj\\",
+        "outputPath": "C:\\Users\\YuriMelo\\Documents\\lemure\\Lemure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\YuriMelo\\AppData\\Roaming\\NuGet\\NuGet.Config",
