@@ -1,0 +1,5 @@
+bin/
+obj/
+.vs/
+.vs/Lemure/DesignTimeBuild/.dtbcache.v2
+.vs/Lemure/v16/.suo

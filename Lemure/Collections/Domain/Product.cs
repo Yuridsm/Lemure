@@ -1,4 +1,4 @@
-﻿namespace lemure.Collections
+﻿namespace lemure.Collections.Domain
 {
     public class Product
     {
