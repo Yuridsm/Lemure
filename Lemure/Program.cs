@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lemure.Collections.Comparable;
+using System;
 
 namespace Lemure
 {
@@ -6,7 +7,7 @@ namespace Lemure
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            CarTest.Test();
         }
     }
 }

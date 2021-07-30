@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using lemure.Collections;
+using lemure.Collections.Domain;
 
 namespace lemure.Collections.Enumerations
 {
