@@ -1,18 +1,12 @@
 ﻿using System;
-using lemure.DropCode;
 
-namespace lemure
+namespace Lemure
 {
-    public class Program
+    class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            var foo = Foo.Boo();
-
-            foreach(var elem in foo)
-            {
-                Console.WriteLine(elem);
-            }
+            Console.WriteLine("Hello World!");
         }
     }
 }
