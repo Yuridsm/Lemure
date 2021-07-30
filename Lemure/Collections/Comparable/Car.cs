@@ -6,6 +6,7 @@ namespace Lemure.Collections.Comparable
     {
         public string Name { get; set; }
         public int MaxSpeed { get; set; }
+
         public int CompareTo(Car car)
         {
             if (car is not Car)
