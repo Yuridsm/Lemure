@@ -12,9 +12,18 @@ namespace Lemure.Collections.Comparer
         }
         private SortBy compareField = SortBy.Name;
 
-        public int Compare(Car? x, Car? y)
+        public int Compare(Car x, Car y)
         {
-            throw new System.NotImplementedException();
+            switch(compareField)
+            {
+                case SortBy.Name:
+                    return x.Name.CompareTo(y.Name);
+                case SortBy.MaxSpeed:
+                    return x.MaxSpeed.CompareTo(y.MaxSpeed);
+                default:
+                    break;
+            }
+            return x.Name.CompareTo(y.Name);
         }
     }
 }
