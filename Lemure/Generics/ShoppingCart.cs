@@ -11,5 +11,7 @@ namespace Lemure.Generics
             new Product("Maça", 3.45),
             new Product("Banana", 9.87)
         };
+
+        
     }
 }
