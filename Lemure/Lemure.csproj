@@ -9,6 +9,7 @@
     <Folder Include="DesignPatterns\MyObserver\contracts\" />
     <Folder Include="DesignPatterns\Repository\" />
     <Folder Include="DesignPatterns\UnitOfWork\" />
+    <Folder Include="Generics\" />
   </ItemGroup>
 
   <ItemGroup>
