@@ -1,5 +1,6 @@
-﻿using Lemure.Collections.Comparable;
-using System;
+﻿
+
+using Lemure.Generics;
 
 namespace Lemure
 {
@@ -7,7 +8,7 @@ namespace Lemure
     {
         static void Main(string[] args)
         {
-            CarTest.Test();
+            ExampleReadOnly.GetDinosaursReadOnly();
         }
     }
 }
