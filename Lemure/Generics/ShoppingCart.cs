@@ -12,6 +12,5 @@ namespace Lemure.Generics
             new Product("Banana", 9.87)
         };
 
-        
     }
 }
