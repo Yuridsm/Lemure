@@ -88,31 +88,16 @@ namespace Lemure
             }
         }
 
+        private string ConvertStr(string str, char pattern)
+        {
+            return str;//.Replace('\\', '');
+        }
+
 
         static void Main(string[] args)
         {
-            Point a1 = new(23.392873456m, 3.45674567m);
-            Point a2 = new(2.0m, 3.4m);
-            Point a3 = new(25.392873456m, 3.45674567m);
-            Point a4 = new(26.392873456m, 3.45674567m);
-            Point a5 = new(58.345673456m, 3.45674567m);
-
-            Plan p = new(Dimension.TwoDimension, a1);
-            p.GetPoint();
-            Plan.GetPoints();
-
-            p.SetPoint(a2);
-            Plan.GetPoints();
-
-            p.SetPoint(a3);
-            Plan.GetPoints();
-
-            p.SetPoint(a4);
-            Plan.GetPoints();
-
-            p.SetPoint(a5);
-            Plan.GetPoints();
-            
+            var s = "{\"Guid\":\"00000000-0000-0000-0000-000000000000\",\"Name\":\"First SecurityContext\",\"DefaultTimestamperld\":\"1d1befba-5833-4fdd-ba74-5985aa554826\",\"TrustedItems\":[\"cbf29b73-5ef4-4cf9-b089-13db45dca991\",\"cefdb1d4-9add-4cc1-b7f0-2709e87ec6ee\"],\"AlgorithmConfigGuid\":\"d4a83bd8-db5c-4375-9f34-c2c09d4561e5\"}";
+            Console.WriteLine(s.Replace("\\", ""));
         }
     }
 }
