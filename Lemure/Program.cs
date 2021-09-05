@@ -1,45 +1,56 @@
-﻿using Lemure.Delegates;
-using System;
+﻿using System;
+using System.Diagnostics;
+using lemure.Collections.Domain;
+using System.Collections.Generic;
+using lemure.Collections.Enumerations;
 
 namespace Lemure
 {
-    public class Person
-    {
-        public string Name;
-
-        public Person(string name)
-        {
-            Name = name;
-        }
-
-        public override string ToString()
-        {
-            return $"Name is {Name}";
-        }
-    }
     public class Program
     {
-        public static void Change(Person person, string newName)
+        public static List<Product> GenerateProducts(int amount)
         {
-            person.Name = newName;
-            person = new Person(newName);
+            var products = new List<Product>();
+
+            for(int i = 0; i < amount; i++)
+            {
+                products.Add(new Product("gdfgdfdg", "dgdfg", "gfgdfg"));
+            }
+
+            return products;
         }
-        public static void Change(out Person person)
+
+        public static string[] GetNames(List<Product> products)
         {
-            person = new Person("Generic Name");
+            var result = new string[products.Count];
+
+            for (int i = 0; i < products.Count; i++)
+            {
+                result[i] = products[i]._name;
+            }
+
+            return result;
         }
+
+        public static IEnumerable<Product> GetProducts(List<Product> products)
+            => new MyInfinityEnumerable(products);
+
         public static void Main(string[] args)
         {
-            var yuri = new Person("Yuri");
-            Person igor;
+            var sw = new Stopwatch();
+            sw.Start();
 
-            Change(out igor);
+            // Generate the data fror simulation
+            // Get all product from database
+            var products = GenerateProducts(100000);
 
-            Console.WriteLine(igor);
+            // Get the name of all them
+            var names = GetNames(products);
 
-            Console.WriteLine(yuri);
-            Change(yuri, "Pedro");
-            Console.WriteLine(yuri);
+            foreach(var name in names)
+            {
+                Console.WriteLine($"Time: {sw.ElapsedMilliseconds / 1000.0} seg");
+            }
         }
     }
 }
