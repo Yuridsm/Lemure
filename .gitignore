@@ -2,3 +2,4 @@ bin/
 obj/
 .vs
 .vscode
+Lemure/obj/Debug/net5.0/Lemure.assets.cache
