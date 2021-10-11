@@ -1,5 +1,8 @@
-bin/
-obj/
 .vs
 .vscode
+<<<<<<< Updated upstream
 Lemure/obj/Debug/net5.0/Lemure.assets.cache
+=======
+Lemure/bin/
+Lemure/obj/
+>>>>>>> Stashed changes

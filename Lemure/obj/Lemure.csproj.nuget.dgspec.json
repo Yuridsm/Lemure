@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\YuriMelo\\Documents\\lemure\\Lemure\\Lemure.csproj": {}
+    "C:\\Users\\YuriMelo\\Documents\\Projects\\Lemure\\Lemure\\Lemure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\YuriMelo\\Documents\\lemure\\Lemure\\Lemure.csproj": {
+    "C:\\Users\\YuriMelo\\Documents\\Projects\\Lemure\\Lemure\\Lemure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\YuriMelo\\Documents\\lemure\\Lemure\\Lemure.csproj",
+        "projectUniqueName": "C:\\Users\\YuriMelo\\Documents\\Projects\\Lemure\\Lemure\\Lemure.csproj",
         "projectName": "Lemure",
-        "projectPath": "C:\\Users\\YuriMelo\\Documents\\lemure\\Lemure\\Lemure.csproj",
+        "projectPath": "C:\\Users\\YuriMelo\\Documents\\Projects\\Lemure\\Lemure\\Lemure.csproj",
         "packagesPath": "C:\\Users\\YuriMelo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\YuriMelo\\Documents\\lemure\\Lemure\\obj\\",
+        "outputPath": "C:\\Users\\YuriMelo\\Documents\\Projects\\Lemure\\Lemure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\YuriMelo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,6 +41,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Aspose.Words": {
+              "target": "Package",
+              "version": "[21.8.0, )"
+            },
             "BouncyCastle.NetCore": {
               "target": "Package",
               "version": "[1.8.8, )"
@@ -61,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
