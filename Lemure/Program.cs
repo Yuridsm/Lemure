@@ -1,103 +1,56 @@
 ﻿using System;
+using System.Diagnostics;
+using lemure.Collections.Domain;
 using System.Collections.Generic;
+using lemure.Collections.Enumerations;
 
 namespace Lemure
 {
-    class Program
+    public class Program
     {
-
-        static bool IsVowel(char c) => c is 'a' or 'e' or 'i' or 'o' or 'u';
-        static string GetWeightCategory(decimal bmi) => bmi switch
+        public static List<Product> GenerateProducts(int amount)
         {
-            < 18.5m => "underweight",
-            < 25m => "normal",
-            < 30m => "overweight",
-            _ => "obese"
-        };
+            var products = new List<Product>();
 
-        enum Dimension
-        {
-            OneDimension,
-            TwoDimension,
-            ThreeDimension,
-            NthDimension,
+            for(int i = 0; i < amount; i++)
+            {
+                products.Add(new Product("gdfgdfdg", "dgdfg", "gfgdfg"));
+            }
+
+            return products;
         }
 
-        class Plan
+        public static string[] GetNames(List<Product> products)
         {
-            public readonly Dimension _dimension;
-            public Point Point { get; protected set; }
-            private static List<Point> _points { get; set; }
-            internal Plan(Dimension dimension, Point point)
+            var result = new string[products.Count];
+
+            for (int i = 0; i < products.Count; i++)
             {
-                _dimension = dimension;
-                Point = point;
-                _points = new();
-                _points.Add(point);
+                result[i] = products[i]._name;
             }
 
-            public static void GetPoints()
-            {
-                Console.WriteLine($"----------------------------");
-                foreach(var point in _points)
-                {
-                    Console.WriteLine($"Static List -> {point.ToString()}");
-                }
-                Console.WriteLine($"----------------------------");
-            }
-
-            public void SetPoint(Point point)
-            {
-                _points.Add(point);
-                Point = point;
-            }
-
-            public void GetPoint()
-            {
-                Console.WriteLine(Point.ToString());
-            }
-
+            return result;
         }
 
-        class Point
-        {
-            private readonly decimal _x;
-            private readonly decimal _y;
-            internal Point(decimal x, decimal y){
-                _x = x;
-                _y = y;
-            }
+        public static IEnumerable<Product> GetProducts(List<Product> products)
+            => new MyInfinityEnumerable(products);
 
-            public override bool Equals(Object obj)
+        public static void Main(string[] args)
+        {
+            var sw = new Stopwatch();
+            sw.Start();
+
+            // Generate the data fror simulation
+            // Get all product from database
+            var products = GenerateProducts(100000);
+
+            // Get the name of all them
+            var names = GetNames(products);
+
+            foreach(var name in names)
             {
-                if(obj is not Point) return false;
-
-                var point = obj as Point;
-
-                if((_x == point._x) && (_y == point._y))
-                {
-                    return true;
-                }
-
-                return false;
+                Console.WriteLine($"Time: {sw.ElapsedMilliseconds / 1000.0} seg");
             }
-
-            public override string ToString()
-            {
-                return $"x: {_x} & Y: {_y}";
-            }
-        }
-
-        private string ConvertStr(string str, char pattern)
-        {
-            return str;//.Replace('\\', '');
-        }
-
-
-        static void Main(string[] args)
-        {
-            var s = "{\"Guid\":\"00000000-0000-0000-0000-000000000000\",\"Name\":\"First SecurityContext\",\"DefaultTimestamperld\":\"1d1befba-5833-4fdd-ba74-5985aa554826\",\"TrustedItems\":[\"cbf29b73-5ef4-4cf9-b089-13db45dca991\",\"cefdb1d4-9add-4cc1-b7f0-2709e87ec6ee\"],\"AlgorithmConfigGuid\":\"d4a83bd8-db5c-4375-9f34-c2c09d4561e5\"}";
-            Console.WriteLine(s.Replace("\\", ""));
         }
     }
 }

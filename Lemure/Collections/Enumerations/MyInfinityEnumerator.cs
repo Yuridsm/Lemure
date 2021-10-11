@@ -7,18 +7,18 @@ namespace lemure.Collections.Enumerations
 {
     public class MyInfinityEnumerator : IEnumerator<Product>
     {
-        public Product[] _products { get; set; }
-        private int index = -1;
-
-        public MyInfinityEnumerator(Product[] products)
+        private readonly List<Product> _products;
+        int index = -1;
+        public MyInfinityEnumerator(List<Product> products)
         {
             _products = products;
         }
 
-        public Product Current {
-            get => _products[index];
-        }
-        object IEnumerator.Current => Current;
+        private Product _current;
+
+        public Product Current => _current;
+
+        object IEnumerator.Current => _current;
 
         public void Dispose()
         {
@@ -27,7 +27,10 @@ namespace lemure.Collections.Enumerations
         public bool MoveNext()
         {
             index++;
-            return index < _products.Length;
+            if (index >= _products.Count) return false;
+
+            _current = _products[0];
+            return true;
         }
 
         public void Reset()
