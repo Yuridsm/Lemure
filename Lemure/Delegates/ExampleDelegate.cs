@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Lemure.Delegates
 {
@@ -55,8 +56,10 @@ namespace Lemure.Delegates
 
     public class ExampleDelegate
     {
+        public string[] books = { "               Book 1", "Book 2           ", "Book 3" };
         public delegate int Transform ();
         public delegate double RiseSalary(double salary);
+        public delegate string TransformStringInto(string bookTitle);
         public static void GetInformation(IPerson person, Transform t, RiseSalary riseSalary)
         {
             Console.WriteLine($"My new age is {t.Invoke()}");
@@ -64,5 +67,20 @@ namespace Lemure.Delegates
             Console.WriteLine($"My new age is {riseSalary.Invoke(10.00)}");
             Console.WriteLine($"My current salary is: {person.Salary}");
         }
+
+        public void TransformInto(string[] books, TransformStringInto t)
+        {
+            for(int index = 0; index < books.Length; index++)
+            {
+                books[index] = t.Invoke(books[index]);
+                Console.WriteLine(books[index]);
+            }
+        }
+
+        #region UtilMethods
+        public string TransformIntoUpcase(string str) => str.ToUpper();
+        public string TransformIntoLowerCase(string str) => str.ToLower();
+        public string ApplyTrim(string str) => str.Trim();
+        #endregion
     }
 }
