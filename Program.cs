@@ -1,4 +1,5 @@
-﻿using Lemure.DesignPatterns.ChainOfResponsability;
+﻿using Lemure.DesignPatterns.FactoryMethod;
+using Lemure.Enums;
 
 namespace Lemure
 {
@@ -6,7 +7,8 @@ namespace Lemure
     {
         public static void Main(string[] args)
         {
-            MainChainOfResponsability.Run();
+            FactoryMethodApp factoryMethodApp = new FactoryMethodApp(OpeSys.Linux);
+            factoryMethodApp.Run();
         }
     }
 }

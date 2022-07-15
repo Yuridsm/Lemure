@@ -14,7 +14,6 @@ namespace Lemure.DesignPatterns.ChainOfResponsability
         {
             if(NextHandler is not null)
                 NextHandler.Handle(budget);
-
             return budget;
         }
     }
