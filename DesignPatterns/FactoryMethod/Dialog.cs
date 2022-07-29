@@ -1,5 +1,4 @@
 ﻿using Lemure.DesignPatterns.FactoryMethod.Contracts;
-using System;
 
 namespace Lemure.DesignPatterns.FactoryMethod
 {
@@ -9,7 +8,7 @@ namespace Lemure.DesignPatterns.FactoryMethod
 
         public void Render()
         {
-            var button = CreateButton();
+            var button = CreateButton(); 
             button.Render();
         }
     }

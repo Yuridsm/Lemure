@@ -1,4 +1,5 @@
 ﻿using Lemure.DesignPatterns.FactoryMethod;
+using Lemure.DesignPatterns.Strategy;
 using Lemure.Enums;
 
 namespace Lemure
@@ -7,8 +8,7 @@ namespace Lemure
     {
         public static void Main(string[] args)
         {
-            FactoryMethodApp factoryMethodApp = new FactoryMethodApp(OpeSys.Linux);
-            factoryMethodApp.Run();
+            StrategyApp.Run();
         }
     }
 }
