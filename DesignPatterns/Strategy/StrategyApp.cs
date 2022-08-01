@@ -13,14 +13,13 @@ namespace Lemure.DesignPatterns.Strategy
 
 
             NavigatorContext navigatorContext = new NavigatorContext();
+
+
             navigatorContext.SetStrategy(roadStrategy);
             navigatorContext.ExecuteStrategy(1, 2);
 
             navigatorContext.SetStrategy(walkingStrategy);
-            navigatorContext.ExecuteStrategy(1, 2);
-
-            navigatorContext.SetStrategy(publicTransportStrategy);
-            navigatorContext.ExecuteStrategy(1, 2);
+            navigatorContext.ExecuteStrategy(3, 5);
 
         }
     }
