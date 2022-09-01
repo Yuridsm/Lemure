@@ -1,5 +1,4 @@
-﻿using Lemure.DesignPatterns.AbstractFactory;
-using Lemure.Enums;
+﻿using Lemure.DesignPatterns.Adapter;
 
 namespace Lemure
 {
@@ -7,8 +6,7 @@ namespace Lemure
     {
         public static void Main(string[] args)
         {
-            App application = new App();
-            application.Run(OpeSys.Windows);
+            BankApp.Run();
         }
     }
 }
