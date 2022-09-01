@@ -4,11 +4,11 @@ namespace Lemure.DesignPatterns.FactoryMethod
 {
     public abstract class Dialog
     {
-        public abstract Button CreateButton();
+        public abstract Button FactoryMethod();
 
         public void Render()
         {
-            var button = CreateButton(); 
+            var button = FactoryMethod();
             button.Render();
         }
     }

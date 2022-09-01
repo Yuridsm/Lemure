@@ -6,7 +6,7 @@ namespace Lemure.DesignPatterns.FactoryMethod.Creators
 {
     public class MacDialog : Dialog
     {
-        public override Button CreateButton()
+        public override Button FactoryMethod()
         {
             Console.WriteLine("Create Button for Mac OS...");
             return new MacButton();

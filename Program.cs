@@ -1,5 +1,4 @@
-﻿using Lemure.DesignPatterns.Command;
-using Lemure.DesignPatterns.Strategy;
+﻿using Lemure.DesignPatterns.AbstractFactory;
 using Lemure.Enums;
 
 namespace Lemure
@@ -8,7 +7,8 @@ namespace Lemure
     {
         public static void Main(string[] args)
         {
-            Client.Run();
+            App application = new App();
+            application.Run(OpeSys.Windows);
         }
     }
 }

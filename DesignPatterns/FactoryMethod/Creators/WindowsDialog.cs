@@ -6,7 +6,7 @@ namespace Lemure.DesignPatterns.FactoryMethod.Creators
 {
     public class WindowsDialog : Dialog
     {
-        public override Button CreateButton()
+        public override Button FactoryMethod()
         {
             Console.WriteLine("Create Button for Windows...");
             return new WindowsButton();
