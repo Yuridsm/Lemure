@@ -4,12 +4,12 @@ using System;
 
 namespace Lemure.DesignPatterns.FactoryMethod.Creators
 {
-    public class WindowsDialog : Dialog
+    public class LinuxDialogFactory : Dialog
     {
         public override Button FactoryMethod()
         {
-            Console.WriteLine("Create Button for Windows...");
-            return new WindowsButton();
+            Console.WriteLine("Create Button for Linux...");
+            return new LinuxButton();
         }
     }
 }

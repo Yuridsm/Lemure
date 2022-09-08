@@ -1,4 +1,4 @@
-﻿using Lemure.DesignPatterns.Adapter;
+﻿using Lemure.DesignPatterns.Proxy;
 
 namespace Lemure
 {
@@ -6,7 +6,8 @@ namespace Lemure
     {
         public static void Main(string[] args)
         {
-            BankApp.Run();
+            //Client.RunNoProxy();
+            Client.RunWithProxy();
         }
     }
 }

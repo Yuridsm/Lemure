@@ -18,17 +18,17 @@ namespace Lemure.DesignPatterns.FactoryMethod
             // Check what operating system we are using
             if(OpeSys.Windows == _operatingSystem)
             {
-                Dialog = new WindowsDialog();
+                Dialog = new WindowsDialogFactory();
             }
 
             if (OpeSys.Linux == _operatingSystem)
             {
-                Dialog = new LinuxDialog();
+                Dialog = new LinuxDialogFactory();
             }
 
             if (OpeSys.MacOS == _operatingSystem)
             {
-                Dialog = new MacDialog();
+                Dialog = new MacDialogFactory();
             }
         }
 
