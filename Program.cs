@@ -1,4 +1,4 @@
-﻿using Lemure.DesignPatterns.Proxy;
+﻿using Lemure.DesignPatterns.Prototype;
 
 namespace Lemure
 {
@@ -6,8 +6,7 @@ namespace Lemure
     {
         public static void Main(string[] args)
         {
-            //Client.RunNoProxy();
-            Client.RunWithProxy();
+            Client.Run();
         }
     }
 }
