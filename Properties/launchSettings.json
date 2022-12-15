@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Lemure": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
