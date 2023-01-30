@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 using Serilog.Sinks.Elasticsearch;
 using Serilog;
 using Lemure.Invariants;
-using Lemure.DesignPatterns.FluentInterface;
+using Lemure.DesignPatterns.Bridge;
 
 namespace Lemure
 {
@@ -74,7 +74,8 @@ namespace Lemure
             //}
 
             //Client.Run();
-            var car = Bambobi.Create("Amarelo", 4);
+            BridgeClient.RunWithRadio();
+            BridgeClient.RunWithTV();
         }
 
         private static void RunSomething(int id)
