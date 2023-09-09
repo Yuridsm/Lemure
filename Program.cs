@@ -1,12 +1,13 @@
-﻿using System.Threading.Tasks;
-using Lemure.CNAB;
+﻿using Lemure.Delegates.Bridge;
+using Lemure.DesignPatterns.Bridge;
 
 namespace Lemure;
 
 public static class Program
 {
-    public static async Task Main()
-    {
-		await SantanderCNAB.ExecuteUseCase();
+  public static void Main()
+  {
+		// await SantanderCNAB.ExecuteUseCase();
+    BridgeClient.Execute();
 	}
 }
