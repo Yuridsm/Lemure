@@ -1,15 +1,13 @@
-using Microsoft.EntityFrameworkCore.Query.Internal;
-
 namespace Lemure.DesignPatterns.Bridge.Config;
 
 public class LocalFileSystemConfig
 {
-    public string RootDirectory { get; internal set; }
+    public string RootDirectory { get; set; }
 }
 
 public class LocalFileSystemConfigBuilder
 {
-    private LocalFileSystemConfig config = new();
+    private readonly LocalFileSystemConfig config = new();
 
     public LocalFileSystemConfigBuilder SetRootDirectory(string rootDirectory)
     {

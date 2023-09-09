@@ -11,7 +11,7 @@ public class BridgeClient
         IFileSystemOperation fileSystemOperation;
         FileSystem fileSystem;
 
-        // Local File
+        #region LocalFileSystem
         LocalFileSystemConfig config = new LocalFileSystemConfigBuilder()
             .SetRootDirectory("C:\\Files")
             .Build();
@@ -21,33 +21,62 @@ public class BridgeClient
         fileSystem = new CustomFileSystem(fileSystemOperation);
         fileSystem.CreateFile("test.txt");
         fileSystem.DeleteFile("test.txt");
+        #endregion
 
-        // Private Network
-        fileSystemOperation = new PrivateNetworkFileSystem();
+        #region PrivateNetwork
+        NetworkFileSystemConfig networkConfig = new NetworkFileSystemConfigBuilder()
+            .SetServerAddress("http://localhost:4000")
+            .SetUsername("Yuri")
+            .SetPassword("teste123")
+            .Build();
 
-        fileSystem = new CustomFileSystem(fileSystemOperation);
-        fileSystem.CreateFile("test.txt");
-        fileSystem.DeleteFile("test.txt");
-
-        // AWS File System
-        fileSystemOperation = new AWSFileSystem();
-
-        fileSystem = new CustomFileSystem(fileSystemOperation);
-        fileSystem.CreateFile("test.txt");
-        fileSystem.DeleteFile("test.txt");
-
-        // Azure File System
-        fileSystemOperation = new AzureFileSystem();
+        fileSystemOperation = new PrivateNetworkFileSystem(networkConfig);
 
         fileSystem = new CustomFileSystem(fileSystemOperation);
         fileSystem.CreateFile("test.txt");
         fileSystem.DeleteFile("test.txt");
+        #endregion
 
-        // GCP File System
-        fileSystemOperation = new GCPFileSystem();
+        #region AWSFileSystem
+        CloudFileSystemConfig awsFileSystemConfig = new CloudFileSystemConfigBuilder()
+            .SetCloudProvider(CloudProviderEnum.AWS)
+            .SetBucketName("aws-bucket-docs")
+            .SetConnectionString("my AWS connection string here")
+            .Build();
+
+        fileSystemOperation = new AWSFileSystem(awsFileSystemConfig);
 
         fileSystem = new CustomFileSystem(fileSystemOperation);
         fileSystem.CreateFile("test.txt");
         fileSystem.DeleteFile("test.txt");
+        #endregion
+
+        #region AzureFileSystem
+        CloudFileSystemConfig azureFileSystemConfig = new CloudFileSystemConfigBuilder()
+            .SetCloudProvider(CloudProviderEnum.AWS)
+            .SetBucketName("azure-bucket-docs")
+            .SetConnectionString("my azure connection string here")
+            .Build();
+
+        fileSystemOperation = new AzureFileSystem(azureFileSystemConfig);
+
+        fileSystem = new CustomFileSystem(fileSystemOperation);
+        fileSystem.CreateFile("test.txt");
+        fileSystem.DeleteFile("test.txt");
+        #endregion
+
+        #region GCPFileSystem
+        CloudFileSystemConfig gcpFileSystemConfig = new CloudFileSystemConfigBuilder()
+            .SetCloudProvider(CloudProviderEnum.AWS)
+            .SetBucketName("gcp-bucket-docs")
+            .SetConnectionString("my GCP connection string here")
+            .Build();
+
+        fileSystemOperation = new GCPFileSystem(gcpFileSystemConfig);
+
+        fileSystem = new CustomFileSystem(fileSystemOperation);
+        fileSystem.CreateFile("test.txt");
+        fileSystem.DeleteFile("test.txt");
+        #endregion
     }
 }
