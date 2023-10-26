@@ -1,4 +1,6 @@
 ﻿using System;
+using Lemure.DesignPatterns.Iterator.Enumerable;
+using Lemure.DesignPatterns.Iterator.Iterators;
 
 namespace Lemure.DesignPatterns.Iterator;
 
@@ -8,7 +10,7 @@ internal class IteratorClient
     {
         var network = new Facebook();
 
-        ProfileIterator profileIterator = new FacebookIterator(network, new Guid("b2c67609-685c-4240-93ce-4dfd00bc7b40"));
+        var profileIterator = new FacebookIterator(network, new Guid("0a4ba7ee-05ca-4ca0-b8b4-42af8f12a0a4"));
 
         while(profileIterator.HasMore())
         {

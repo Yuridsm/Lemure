@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using Lemure.DesignPatterns.Iterator.Contracts;
+using Lemure.DesignPatterns.Iterator.Entity;
+using Lemure.DesignPatterns.Iterator.Factory;
 
-namespace Lemure.DesignPatterns.Iterator;
+namespace Lemure.DesignPatterns.Iterator.Iterators;
 
-internal class FacebookIterator : ProfileIterator
+internal class FacebookIterator : IProfileIterator
 {
     private readonly FacebookRequestFactory _iterable;
     private int _position = 0;

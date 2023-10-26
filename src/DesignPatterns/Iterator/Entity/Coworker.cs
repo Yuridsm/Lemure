@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Lemure.DesignPatterns.Iterator;
+namespace Lemure.DesignPatterns.Iterator.Entity;
 
 internal class Coworker
 {

@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Lemure.DesignPatterns.Iterator.Contracts;
+using Lemure.DesignPatterns.Iterator.Entity;
+using Lemure.DesignPatterns.Iterator.Factory;
+using Lemure.DesignPatterns.Iterator.Iterators;
 
-namespace Lemure.DesignPatterns.Iterator;
+namespace Lemure.DesignPatterns.Iterator.Enumerable;
 
-internal class Facebook : SocialNetwork, FacebookRequestFactory
+internal class Facebook : ISocialNetwork, FacebookRequestFactory
 {
-    public const int MAX_LENGTH = 3;
-
     private readonly List<Profile> _users = new List<Profile>
     {
         new Profile(new Guid("063d509c-3d9f-44aa-84e5-fd111fa07af6"), "Thamirys"),
@@ -16,23 +18,23 @@ internal class Facebook : SocialNetwork, FacebookRequestFactory
 
         new Profile(new Guid("0a4ba7ee-05ca-4ca0-b8b4-42af8f12a0a4"), "Igor"),
         new Profile(new Guid("fff511d7-847e-45a3-bad5-351ddcb6fb8e"), "Iran"),
-        new Profile(new Guid("aeb1382a-4678-4bf0-b78d-2d8e5f86cb23"), "Trump"),
+        new Profile(new Guid("aeb1382a-4678-4bf0-b78d-2d8e5f86cb23"), "Trump")
     };
 
     private readonly List<Coworker> _profies = new List<Coworker>();
 
     public Facebook()
     {
-        _profies.Add(new Coworker(_users.Take(3).ToList(), "The Google Cowork", "Apple"));
+        _profies.Add(new Coworker(_users.Take(3).ToList(), "The Apple Cowork", "Apple"));
         _profies.Add(new Coworker(_users.TakeLast(3).ToList(), "The Microsoft Cowork", "Microsoft"));
     }
 
-    public ProfileIterator CreateCoworkersIterator(Guid profileId)
+    public IProfileIterator CreateCoworkersIterator(Guid profileId)
     {
         return new FacebookIterator(this, profileId);
     }
 
-    public ProfileIterator CreateFriendsIterator(Guid profileId)
+    public IProfileIterator CreateFriendsIterator(Guid profileId)
     {
         return new FacebookIterator(this, profileId);
     }

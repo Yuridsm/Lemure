@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lemure.DesignPatterns.Iterator;
+namespace Lemure.DesignPatterns.Iterator.Entity;
 
 internal class NullObjectProfile : Profile
 {

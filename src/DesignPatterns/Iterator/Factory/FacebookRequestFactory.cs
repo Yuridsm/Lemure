@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using Lemure.DesignPatterns.Iterator.Entity;
 
-namespace Lemure.DesignPatterns.Iterator;
+namespace Lemure.DesignPatterns.Iterator.Factory;
 
 internal interface FacebookRequestFactory
 {
