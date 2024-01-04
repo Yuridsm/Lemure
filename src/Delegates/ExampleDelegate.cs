@@ -1,69 +1,68 @@
 using System;
 
-namespace Lemure.Delegates
+namespace Lemure.Delegates;
+
+public interface IPerson
 {
-	public interface IPerson
+	string Name { get; }
+	int Age { get; }
+	double Salary { get; }
+	int OneMoreAge();
+	double RiseSalary(double salary);
+}
+
+public class Person : IPerson
+{
+	private readonly string _name;
+	private int _age;
+	private double _salary;
+
+	public Person(string name, int age)
 	{
-		string Name { get; }
-		int Age { get; }
-		double Salary { get; }
-		int OneMoreAge();
-		double RiseSalary(double salary);
+		_name = name;
+		_age = age;
+		_salary = 1000.00;
 	}
 
-	public class Person : IPerson
+	public string Name
 	{
-		private readonly string _name;
-		private int _age;
-		private double _salary;
-
-		public Person(string name, int age)
+		get
 		{
-			_name = name;
-			_age = age;
-			_salary = 1000.00;
+			return _name;
 		}
-
-		public string Name
+	}
+	public int Age
+	{
+		get
 		{
-			get
-			{
-				return _name;
-			}
+			return _age;
 		}
-		public int Age
+	}
+	public double Salary
+	{
+		get
 		{
-			get
-			{
-				return _age;
-			}
-		}
-		public double Salary
-		{
-			get
-			{
-				return _salary;
-			}
-		}
-		public int OneMoreAge() => _age + 1;
-
-		public double RiseSalary(double salary)
-		{
-			_salary += salary;
 			return _salary;
 		}
 	}
+	public int OneMoreAge() => _age + 1;
 
-	public class ExampleDelegate
+	public double RiseSalary(double salary)
 	{
-		public delegate int Transform();
-		public delegate double RiseSalary(double salary);
-		public static void GetInformation(IPerson person, Transform t, RiseSalary riseSalary)
-		{
-			Console.WriteLine($"My new age is {t.Invoke()}");
-			Console.WriteLine($"My current salary is: {person.Salary}");
-			Console.WriteLine($"My new age is {riseSalary.Invoke(10.00)}");
-			Console.WriteLine($"My current salary is: {person.Salary}");
-		}
+		_salary += salary;
+		return _salary;
+	}
+}
+
+public class ExampleDelegate
+{
+	public delegate int Transform();
+	public delegate double RiseSalary(double salary);
+	public static void GetInformation(IPerson person, Transform t, RiseSalary riseSalary)
+	{
+		Console.WriteLine($"My new age is {t.Invoke()}");
+		Console.WriteLine($"My current salary is: {person.Salary}");
+		Console.WriteLine($"My new age is {riseSalary.Invoke(10.00)}");
+		Console.WriteLine($"My current salary is: {person.Salary}");
 	}
 }

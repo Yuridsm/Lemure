@@ -1,8 +1,10 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
+using lemure.OptionalObject;
 using Lemure.Caching;
 using Lemure.CQRS;
+using Lemure.Delegates;
 using Lemure.DesignPatterns.Iterator;
 using Lemure.Infrastructure;
 using Microsoft.Extensions.Configuration;
@@ -30,7 +32,8 @@ public static class Program
         //await testCQRS.Run();
 
         //Log.CloseAndFlush();
-        new IteratorClient().Run();
+        // new IteratorClient().Run();
+        FuncStudy.Execute();
     }
 
     static IHostBuilder CreateHostBuilder(string[] args)
