@@ -7,4 +7,4 @@ We have a list of all Implemented Design Patterns
 - Bridge
 - Chain of Responsability
 - Command
-- [Rules Engine]()
+- [Rules Engine](./RulesEngine/Rules%20Engine.md)
