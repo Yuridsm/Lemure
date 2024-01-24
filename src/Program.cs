@@ -1,58 +1,35 @@
 ﻿using System;
-using System.IO;
-using System.Threading.Tasks;
-using lemure.OptionalObject;
-using Lemure.Caching;
-using Lemure.CQRS;
-using Lemure.Delegates;
-using Lemure.DesignPatterns.Iterator;
-using Lemure.Infrastructure;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Serilog;
+using Lemure.DesignPatterns.RulesEngine;
+using Lemure.DesignPatterns.RulesEngine.NoRefactor;
+using Lemure.DesignPatterns.RulesEngine.Rules;
 
 namespace Lemure;
 
 public static class Program
 {
-    public static async Task Main(string[] args)
+    public static void Main(string[] args)
     {
-        //using IHost host = CreateHostBuilder(args).Build();
-        //using var scope = host.Services.CreateScope();
-        //var services = scope.ServiceProvider;
+        var customer = new Customer
+        {
+            DateOfBirth = new DateTime(1998, 1, 12),
+            IsVeteran = false,
+            DateOfFirstPurchase = new DateTime(2013, 1, 24)
+        };
 
-        //var configuration = services.GetRequiredService<IConfiguration>();
-        //Log.Logger = new LoggerConfiguration()
-        //    .ReadFrom.Configuration(configuration)
-        //    .CreateLogger();
+        var result1 = DiscountCalculatorNoRefactor.CalculateDiscountPercentageWithoutPredicates(customer);
+        var result2 = DiscountCalculatorNoRefactor.CalculateDiscountPercentageWithPredicates(customer);
+        var result3 = DiscountCalculatorNoRefactor.CalculateDiscountPercentageWithExtensionsMethod(customer);
 
-        //var testCQRS = services.GetRequiredService<TestCQRS>();
+        Console.WriteLine($"O desconto aplicado ao Yuri é: {result1}");
+        Console.WriteLine($"O desconto aplicado ao Yuri é: {result2}");
+        Console.WriteLine($"O desconto aplicado ao Yuri é: {result3}");
 
-        //await testCQRS.Run();
+        #region Rules Engine
+        DiscountRuleEvaluator evaluator = new DiscountRuleEvaluator();
 
-        //Log.CloseAndFlush();
-        // new IteratorClient().Run();
-        FuncStudy.Execute();
-    }
+        var rulesEngineResult = evaluator.CalculateDiscountPercentage(customer);
+        Console.WriteLine($"O desconto aplicado ao Yuri é: {rulesEngineResult}");
 
-    static IHostBuilder CreateHostBuilder(string[] args)
-    {
-        return Host.CreateDefaultBuilder()
-            .ConfigureHostConfiguration(host =>
-            {
-                host.SetBasePath(Directory.GetCurrentDirectory());
-                host.AddJsonFile("appsettings.json", true, true);
-                host.AddCommandLine(args);
-            })
-            .ConfigureServices((_, services) =>
-            {
-                services.AddMemoryCache();
-                services.AddTransient<PerformanceNoCaching>();
-                services.AddTransient<DatabaseEmployee>();
-                services.AddTransient<TestCQRS>();
-                services.AddSingleton<IBookmarkRepository, BookmarkRepository>();
-                services.AddCQRSLayerServices();
-            });
+        #endregion
     }
 }
