@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Lemure.DesignPatterns.RulesEngine;
 using Lemure.DesignPatterns.RulesEngine.NoRefactor;
 using Lemure.DesignPatterns.RulesEngine.Rules;
@@ -28,6 +29,7 @@ public static class Program
         DiscountRuleEvaluator evaluator = new DiscountRuleEvaluator();
 
         var rulesEngineResult = evaluator.CalculateDiscountPercentage(customer);
+        
         Console.WriteLine($"O desconto aplicado ao Yuri é: {rulesEngineResult}");
 
         #endregion
