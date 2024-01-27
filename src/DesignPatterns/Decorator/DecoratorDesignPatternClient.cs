@@ -9,9 +9,14 @@ public static class DecoratorDesignPatternClient
     {
         Console.WriteLine("DECORATOR DESIGN PATTERN\n\n");
         var shirt = new Shirt(1000, "Shirt");
+
         BasicShirtDecorator decoratedShirt = new BasicShirtDecorator(shirt);
+        PrintedShirtDecorator decoratedPrintedShirt = new PrintedShirtDecorator(shirt);
+        AnimePrintShirtDecorator decoratedAnimePrintedShirt = new AnimePrintShirtDecorator(shirt);
         
-        Console.WriteLine($"Name: {decoratedShirt.GetName()}");
-        Console.WriteLine($"price: {decoratedShirt.GetPrice()}");
+        Console.WriteLine($"Shirt Price: {shirt.GetPrice()}");
+        Console.WriteLine($"Basic Shirt Price: {decoratedShirt.GetPrice()}");
+        Console.WriteLine($"Printed Shirt Price: {decoratedPrintedShirt.GetPrice()}");
+        Console.WriteLine($"Anime Printed Shirt Price: {decoratedAnimePrintedShirt.GetPrice()}");
     }
 }

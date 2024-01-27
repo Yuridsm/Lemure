@@ -14,4 +14,9 @@ public class Shirt : IProduct
     public string GetName() => _name;
 
     public double GetPrice() => _price;
+
+    public override string ToString()
+    {
+        return $"Name: {_name}, Price: {_price}";
+    }
 }
