@@ -5,22 +5,21 @@ namespace Lemure.DesignPatterns.Decorator.Decorators;
 public sealed class LogDecorator<TAggregateRoot> : InMemoryRepositoryAbstractDecorator<TAggregateRoot>
     where TAggregateRoot : IAggregateRoot
 {
-    private readonly IInMemoryRepository<TAggregateRoot> _inMemoryRepository;
-
     public LogDecorator(IInMemoryRepository<TAggregateRoot> inMemoryRepository) : base(inMemoryRepository)
-        => _inMemoryRepository = inMemoryRepository;
-
-    public void AddWithLog(TAggregateRoot aggregateRoot)
     {
-        LogMessage();
-        _inMemoryRepository.Add(aggregateRoot);
     }
 
-    public void RemoveWithLog(Guid aggregateRootIdentifier)
+    public override void Add(TAggregateRoot aggregateRoot)
     {
-        LogMessage();
-        _inMemoryRepository.Remove(aggregateRootIdentifier);
+        LogMessage($"Logging {aggregateRoot} in [Add method]");
+        base.Add(aggregateRoot);
     }
 
-    private void LogMessage() => Console.WriteLine("Adicionando ao log. Remove.");
+    public override void Remove(Guid aggregateRootIdentifier)
+    {
+        LogMessage($"Logging {aggregateRootIdentifier} in [Remove method]");
+        base.Remove(aggregateRootIdentifier);
+    }
+
+    private void LogMessage(string message) => Console.WriteLine(message);
 }
